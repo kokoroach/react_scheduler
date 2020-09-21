@@ -130,7 +130,6 @@ const SelectedDate = () => {
   };
 
   return (
-    <div>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <DatePicker
           autoOk
@@ -143,7 +142,6 @@ const SelectedDate = () => {
           shouldDisableDate={(day) => (day.getDay() === 0)}
         />
       </MuiPickersUtilsProvider>
-    </div>
   );
 }
 
@@ -202,9 +200,7 @@ export default function AppLayout() {
               Select Date
             </Typography>
             <Toolbar className={classes.customizeToolbar}/>
-            <Container>
-              {SelectedDate()}
-            </Container>
+            {SelectedDate()}
           </Grid>
           <Grid item xs={6}>
             <Typography variant="h5" align="center">
